@@ -123,8 +123,5 @@ int main(){
     //invertirArreglo(5);
     //sumarArreglos(5);
     
-    // Probar la función de eliminación
-    ejemploEliminacion();
-    
     return 0;
 }

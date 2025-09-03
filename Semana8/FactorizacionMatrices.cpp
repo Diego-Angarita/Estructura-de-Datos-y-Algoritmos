@@ -91,6 +91,8 @@ int sustitucionProgresiva(int Ab[100][101], int n, double x[100]) {
     return 1; // Solucion unica
 }
 
+
+
 int main() {
     int n;
     cout << "Ingrese el tamano de la matriz cuadrada (max 100): ";

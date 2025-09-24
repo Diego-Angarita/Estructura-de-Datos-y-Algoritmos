@@ -58,7 +58,7 @@ public:
         cout << endl;
     }
 
-    // Recorrido DFS (Búsqueda en Profundidad)
+    // Recorrido DFS (Búsqueda en Profundidad) LIFO 
     void DFS(int verticeInicio) {
         vector<bool> visitado(numVertices, false);
         stack<int> pila;
@@ -86,7 +86,7 @@ public:
         cout << endl;
     }
 
-    // Recorrido BFS (Búsqueda en Anchura)
+    // Recorrido BFS (Búsqueda en Anchura) FIFO
     void BFS(int verticeInicio) {
         vector<bool> visitado(numVertices, false);
         queue<int> cola;
@@ -278,8 +278,8 @@ private:
 // Función de demostración
 int main() {
     cout << "=== DEMOSTRACIÓN DE GRAFOS ===" << endl;
-    
-    // Crear un grafo no dirigido
+        
+// Crear un grafo no dirigido
     cout << "\n--- Grafo No Dirigido ---" << endl;
     GrafoNoDirigido grafoND(5);
     

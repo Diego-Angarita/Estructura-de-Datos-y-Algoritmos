@@ -244,7 +244,7 @@ int main(){
         }
     }
 
-    //Llenar matrices A y B con numeros random
+    //Llenar matrices A y B con  numeros random
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < p; j++) {
             A[i][j] = generarRandom();

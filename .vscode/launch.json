@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/diego/Estruc.Datos y Algoritmos/Semana3",
-      "program": "c:/Users/diego/Estruc.Datos y Algoritmos/Semana3/build/Debug/outDebug",
+      "cwd": "c:/Users/diego/Estruc.Datos y Algoritmos/Estructura-de-Datos-y-Algoritmos/Parcial2",
+      "program": "c:/Users/diego/Estruc.Datos y Algoritmos/Estructura-de-Datos-y-Algoritmos/Parcial2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

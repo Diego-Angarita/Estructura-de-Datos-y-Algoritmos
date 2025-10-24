@@ -71,7 +71,7 @@ int** reintegrar_mat(int** submat, int** mat, int row_start, int col_start, int 
             mat[row_start + i][col_start + j] = submat[i][j];
         }
     }
-    return mat;
+    return mat; 
 }
 
 int** strassen(int** A, int** B, int size) {
@@ -220,7 +220,7 @@ void matmul_ikj(int A[maxSize][maxSize], int B[maxSize][maxSize], int C[maxSize]
 
 int main(){
     int m, p, n;
-    while (true) {
+    while (true) {          
         try {
             cout << "ingrese el numero de filas de A (m): ";
             cin >> m;

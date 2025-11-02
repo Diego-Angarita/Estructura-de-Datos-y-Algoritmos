@@ -1,16 +1,9 @@
 #include <iostream>
-#include <vector>
-#include <list>
-#include <queue>
-#include <stack>
-#include <unordered_set>
-#include <algorithm>
 #include "c:/Users/diego/Estruc.Datos y Algoritmos/Estructura-de-Datos-y-Algoritmos/Semana11/GrafosDirigidosYNoDirigidos.cpp"
 
 using namespace std;
 
 class GrafoComplementario : public Grafo {
-    
 };
 
 int main() {

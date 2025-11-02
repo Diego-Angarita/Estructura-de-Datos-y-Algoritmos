@@ -1,0 +1,11 @@
+resultadosDIJKSTRA
+Grafo: Dirigido
+Vertices: n = 4
+Aristas: m = 10
+Fuente: s = 0
+Tiempo: 0.123300 ms
+distanicias minimas desde el vertice 0:
+Vertice   0:      0 | Camino: 0
+Vertice   1:      3 | Camino: 0 -> 1
+Vertice   2:      7 | Camino: 0 -> 2
+Vertice   3:      8 | Camino: 0 -> 1 -> 3

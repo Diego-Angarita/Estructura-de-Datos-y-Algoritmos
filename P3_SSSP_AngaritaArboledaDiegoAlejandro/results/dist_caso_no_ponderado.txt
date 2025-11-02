@@ -1,0 +1,11 @@
+resultadosBFS
+Grafo: Dirigido
+Vertices: n = 4
+Aristas: m = 8
+Fuente: s = 0
+Tiempo: 0.119400 ms
+distanicias minimas desde el vertice 0:
+Vertice   0:      0 | Camino: 0
+Vertice   1:      1 | Camino: 0 -> 1
+Vertice   2:      2 | Camino: 0 -> 1 -> 2
+Vertice   3:      1 | Camino: 0 -> 3

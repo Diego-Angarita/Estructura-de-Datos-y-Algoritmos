@@ -1,11 +1,13 @@
 resultadosBFS
 Grafo: Dirigido
-Vertices: n = 4
+Vertices: n = 6
 Aristas: m = 4
 Fuente: s = 0
-Tiempo: 0.041900 ms
+Tiempo: 0.042900 ms
 distanicias minimas desde el vertice 0:
 Vertice   0:      0 | Camino: 0
 Vertice   1:      1 | Camino: 0 -> 1
-Vertice   2:      2 | Camino: 0 -> 1 -> 2
-Vertice   3:      3 | Camino: 0 -> 1 -> 2 -> 3
+Vertice   2: INF (inalcanzable)
+Vertice   3: INF (inalcanzable)
+Vertice   4: INF (inalcanzable)
+Vertice   5: INF (inalcanzable)

@@ -55,12 +55,12 @@ bool leerArchivo(string& nombreArchivo, Grafo*& grafo, bool& dirigido){
 
     //Detectar si el grafo es dirigido
     dirigido = false;
-    for(size_t i = 0; i < aristas.size(); i++){
+    for(int i = 0; i < aristas.size(); i++){
         int u1 = get<0>(aristas[i]);
         int v1 = get<1>(aristas[i]);
         bool bilateral = false;
         
-        for(size_t j = 0; j < aristas.size(); j++){
+        for(int j = 0; j < aristas.size(); j++){
             int u2 = get<0>(aristas[j]);
             int v2 = get<1>(aristas[j]);
             if(u1 == v2 && v1 == u2){
@@ -127,7 +127,7 @@ void csv(string nombreArchivo, const string& nombreCaso, Grafo& grafo, double ti
     file << nombreCaso << ",";
     file << (grafo.getTipo() == 0 ? "BFS" : "Dijkstra") << ",";
     file << grafo.getCantidadVertices() << ",";
-    file << grafo.getCantidadAristas() << ",";
+    file << grafo.getCantidadAristas()/2 << ",";
     file << grafo.getFuente() << ",";
     file << (dirigido ? "dirigido" : "no_dirigido") << ",";
     file << fixed << setprecision(6) << tiempo << endl;
@@ -153,7 +153,7 @@ void escribirResultados(string nombreArchivo, Grafo& grafo, vector<int>& distanc
     file << (grafo.getTipo() == 0 ? "BFS" : "DIJKSTRA") << endl;
     file << "Grafo: " << (dirigido ? "Dirigido" : "No dirigido") << endl;
     file << "Vertices: n = " << grafo.getCantidadVertices() << endl;
-    file << "Aristas: m = " << grafo.getCantidadAristas() << endl;
+    file << "Aristas: m = " << grafo.getCantidadAristas()/2 << endl;
     file << "Fuente: s = " << grafo.getFuente() << endl;
     file << "Tiempo: " << fixed << setprecision(6) << tiempo << " ms" << endl;
 
@@ -202,7 +202,7 @@ void procesarCaso(string& nombreArchivo, bool primeraEjecucion){
 
     cout << "Grafo: " << (dirigido ? "Dirigido" : "No dirigido") << endl;
     cout << "Vertices: " << grafo->getCantidadVertices() << endl;
-    cout << "Aristas: " << grafo->getCantidadAristas() << endl;
+    cout << "Aristas: " << grafo->getCantidadAristas()/2 << endl;
     cout << "Fuente: " << grafo->getFuente() << endl;
     cout << "Tipo: " << (grafo->getTipo() == 0 ? "No ponderado (BFS)" : "Ponderado (Dijkstra)") << endl;
 
@@ -251,7 +251,7 @@ void procesarCaso(string& nombreArchivo, bool primeraEjecucion){
                 } else {
                     distancia[destino] = -1;
                 }
-            } else {
+            } else {    
                 distancia[destino] = 0;
                 caminos[destino].push_back(destino);
             }

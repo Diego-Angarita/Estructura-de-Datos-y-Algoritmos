@@ -1,4 +1,5 @@
 caso,algoritmo,n,m,s,tipo,tiempo_ms
-caso_no_ponderado,BFS,4,8,0,dirigido,0.119400
-caso_pesos_negativos,Dijkstra,4,10,0,dirigido,0.000100
-caso_ponderado,Dijkstra,4,10,0,dirigido,0.123300
+caso_desconectado,BFS,6,4,0,dirigido,0.042900
+caso_no_ponderado,BFS,4,4,0,dirigido,0.041900
+caso_pesos_negativos,Dijkstra,4,5,0,dirigido,0.000100
+caso_ponderado,Dijkstra,3,6,0,no_dirigido,0.038300

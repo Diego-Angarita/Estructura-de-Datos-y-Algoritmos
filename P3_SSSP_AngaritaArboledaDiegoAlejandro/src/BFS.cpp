@@ -9,7 +9,7 @@ using namespace std;
 bool encontrarElCaminoMasCortoBFSGrafoNoDirigido(Grafo& grafo, int origen, int destino, vector<int>& visitados, vector<int>& distancia, vector<int>& camino) {
   int cantidadVertices = visitados.size();
   
-  //Inicializar visitados, distancias y padres
+  // Inicializar visitados, distancias y padres
   vector<int> padres(cantidadVertices, -1); // Para reconstruir el camino
   for(int i = 0; i < cantidadVertices; i++) {
     visitados[i] = false;
@@ -26,9 +26,9 @@ bool encontrarElCaminoMasCortoBFSGrafoNoDirigido(Grafo& grafo, int origen, int d
     int vertice = cola.front();
     cola.pop();
     
-    //Si encontramos el destino, reconstruimos el camino y terminamos
+    // Si encontramos el destino, reconstruimos el camino y terminamos
     if(vertice == destino) {
-      //Reconstruir el camino desde el destino hasta el origen
+      // Reconstruir el camino desde el destino hasta el origen
       camino.clear();
       int actual = destino;
       while(actual != -1) {
@@ -52,7 +52,7 @@ bool encontrarElCaminoMasCortoBFSGrafoNoDirigido(Grafo& grafo, int origen, int d
     }
   }
 
-  //Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
+  // Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
   camino.clear(); 
   return false;
 }
@@ -60,7 +60,7 @@ bool encontrarElCaminoMasCortoBFSGrafoNoDirigido(Grafo& grafo, int origen, int d
 bool encontrarElCaminoMasCortoBFSGrafoDirigido(GrafoDirigido& grafo, int origen, int destino, vector<int>& visitados, vector<int>& distancia, vector<int>& camino) {
   int cantidadVertices = visitados.size();
   
-  //Inicializar visitados, distancias y padres
+  // Inicializar visitados, distancias y padres
   vector<int> padres(cantidadVertices, -1); // Para reconstruir el camino
   for(int i = 0; i < cantidadVertices; i++) {
     visitados[i] = false;
@@ -77,7 +77,7 @@ bool encontrarElCaminoMasCortoBFSGrafoDirigido(GrafoDirigido& grafo, int origen,
     int vertice = cola.front();
     cola.pop();
     
-    //Si encontramos el destino, reconstruimos el camino y terminamos
+    // Si encontramos el destino, reconstruimos el camino y terminamos
     if(vertice == destino) {
       // Reconstruir el camino desde el destino hasta el origen
       camino.clear();
@@ -102,8 +102,7 @@ bool encontrarElCaminoMasCortoBFSGrafoDirigido(GrafoDirigido& grafo, int origen,
       }
     }
   }
-
-  //Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
+  // Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
   camino.clear();
   return false;
 }

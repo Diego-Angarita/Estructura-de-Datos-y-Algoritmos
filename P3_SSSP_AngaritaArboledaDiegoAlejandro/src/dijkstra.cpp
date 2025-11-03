@@ -4,7 +4,7 @@
 #include "Grafo.cpp"
 using namespace std;
 
-//Valor infinito para distancias iniciales
+// Valor infinito para distancias iniciales
 const int INF = 78934;
 
 //Implementación del algoritmo de Dijkstra para encontrar el camino más corto en grafos ponderados sin pesos negativos.
@@ -12,14 +12,14 @@ const int INF = 78934;
 bool encontrarElCaminoMasCortoDijstraNoDirigido(Grafo& grafo, int origen, int destino, vector<int>& visitados, vector<int>& distancia, vector<int>& camino){
   int cantidadVertices = visitados.size();
   
-  //Inicializar visitados, distancias y padres
+  // Inicializar visitados, distancias y padres
   vector<int> padres(cantidadVertices, -1); // Para reconstruir el camino
   for(int i = 0; i < cantidadVertices; i++) {
     visitados[i] = false;
     distancia[i] = INF; // -1 indica que no hay camino
   }
 
-  //Cola de prioridad para almacenar los vertices que se van visitando, que se ordena por distancia minima al origen
+  //cola de prioridad para almacenar los vertices que se van visitando, que se ordena por distancia minima al origen
 
   priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> cola; 
   cola.push({0, origen});
@@ -29,7 +29,7 @@ bool encontrarElCaminoMasCortoDijstraNoDirigido(Grafo& grafo, int origen, int de
     int vertice = cola.top().second;
     cola.pop();
     
-    //Si encontramos el destino, reconstruimos el camino y terminamos
+    // Si encontramos el destino, reconstruimos el camino y terminamos
     if(vertice == destino) {
         // Reconstruir el camino
         int actual = destino;
@@ -61,7 +61,7 @@ bool encontrarElCaminoMasCortoDijstraNoDirigido(Grafo& grafo, int origen, int de
     }
   }
 
-  //Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
+  // Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
   camino.clear(); 
   return false;
 }
@@ -69,7 +69,7 @@ bool encontrarElCaminoMasCortoDijstraNoDirigido(Grafo& grafo, int origen, int de
 bool encontrarElCaminoMasCortoDijstraDirigido(GrafoDirigido& grafo, int origen, int destino, vector<int>& visitados, vector<int>& distancia, vector<int>& camino) {
   int cantidadVertices = visitados.size();
   
-  //Inicializar visitados, distancias y padres
+  // Inicializar visitados, distancias y padres
   vector<int> padres(cantidadVertices, -1); // Para reconstruir el camino
   for(int i = 0; i < cantidadVertices; i++) {
     visitados[i] = false;
@@ -84,7 +84,7 @@ bool encontrarElCaminoMasCortoDijstraDirigido(GrafoDirigido& grafo, int origen, 
     int vertice = cola.top().second;
     cola.pop();
     
-    //Si encontramos el destino, reconstruimos el camino y terminamos
+    // Si encontramos el destino, reconstruimos el camino y terminamos
     if(vertice == destino) {
         // Reconstruir el camino
         int actual = destino;
@@ -115,7 +115,7 @@ bool encontrarElCaminoMasCortoDijstraDirigido(GrafoDirigido& grafo, int origen, 
     }
   }
 
-  //Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
+  // Si llegamos aquí, no hay camino al destino por lo tanto se vacia el vector camino
   camino.clear(); 
   return false;
 }

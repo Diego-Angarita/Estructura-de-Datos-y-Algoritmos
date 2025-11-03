@@ -1,7 +1,7 @@
 resultadosDIJKSTRA
 Grafo: Dirigido
 Vertices: n = 4
-Aristas: m = 10
+Aristas: m = 5
 Fuente: s = 0
 Tiempo: 0.000100 ms
 ERROR: PESOS NEGATIVOS DETECTADOS
